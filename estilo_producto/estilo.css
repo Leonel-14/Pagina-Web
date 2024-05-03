@@ -5,7 +5,7 @@ body{
     padding: 0;
     margin: 0;
 }
-.menu{
+.contenedor-productos{
     display: flex;
     width: 100%;
     height: 100vh;
@@ -18,8 +18,8 @@ body{
 }
 
 .elemento{ 
-    width: 40vh;
-    height: 400px;
+    width: 270px;
+    height: 300px;
     margin: 20px;
     border: 1px solid black;
     box-shadow: 5px 5px 8px black;
@@ -41,67 +41,34 @@ body{
     font-weight: bold;
     margin: 5px;
 }
-
-@media screen and (min-width: 0px){
-    .menu{
-        height: 410vh;
-    }
-    .elemento{
-        height: 280px;
-    }
-}
-@media screen and (min-width: 375px){
-    .menu{
-        height: 410vh;
-    }
-    .elemento{
-        height: 280px;
-    }
-}
-@media screen and (min-width: 425px){
-    .menu{
-        height: 415vh;
-    }
-    .elemento{
-        height: 285px;
-    }
-}
-@media screen and (min-width: 768px){
-    .menu{
-        height: 210vh;
-    }
-    .elemento{
-        height: 280px;
-    }
-}
-@media screen and (min-width: 1024px){
-    .menu{
-        height: 155vh;
-    }
-    .elemento{
-        height: 275px;
-    }
-}
-@media screen and (min-width: 1245px){
-    .menu{
-        height: 100vh;
-    }
-    .elemento{
-        height: 280px;
-    }
-}
-@media screen and (min-width: 1280px){
-    .menu{
-        height: 100vh;
-    }
-    .elemento{
-        height: 300px;
-    }
-}
-
-
-
 .imagen img{
     width: 100%;
 }
+/**------------------Celular----------------- **/
+@media only screen and (min-width: 0px) and (max-width: 426px){
+    .contenedor-productos{
+        height: 380vh;
+    }
+    .elemento{ 
+        width: 240px;
+        height: 250px;
+    }
+    .elemento p{
+        font-size: 15px;
+    }
+}
+/**------------------Tablet----------------- **/
+@media only screen and (min-width: 426px) and (max-width: 769px){
+    .contenedor-productos{
+        height: 200vh;
+    }
+    .elemento{ 
+        width: 240px;
+        height: 260px;
+    }
+    .elemento p{
+        font-size: 18px;
+    }
+}
+
 
