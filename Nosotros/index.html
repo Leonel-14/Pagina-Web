@@ -6,24 +6,67 @@
     <title>Café Pop</title>
     <link rel="icon" href="img/logo.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
 </head>
 <body>
-    <main>
+    <header>
         <div class="about-section">
             <h1>Acerca de nosotros</h1>
         </div>
-        <div class="text-section">
-            <img src="img/img1.jpg" width="500px">
-            <img src="img/img2.jpg" width="500px"> 
-            <img src="img/img3.jpg" width="500px">  
-            <p>
-                "Bienvenido a Café Pop, en el corazón de Buenos Aires. Ofrecemos una amplia variedad de cafés, desde clásicos hasta creaciones innovadoras, 
-                elaborados con granos de calidad de todo el mundo. Nuestro acogedor ambiente es perfecto para disfrutar de café, bocadillos y postres artesanales 
-                mientras te relajas o trabajas. Únete a nosotros para una experiencia única donde el café es la estrella. ¡Te esperamos en Café Pop!"
-            </p>
+    </header>
+    <main class="main">
+         <!-- Automatic Slideshow Images -->
+        <div class="container">
+            <div class="mySlides w3-display-container w3-center">
+                <img src="img/banner1.jpg" style="width:100%">  
+                </div>
+            </div>
+            <div class="mySlides w3-display-container w3-center">
+                <img src="/img/banner2.jpg" style="width:100%">
+                </div>
+            </div>
+            <div class="mySlides w3-display-container w3-center">
+                <img src="/img/banner3.jpg" style="width:100%">  
+                </div>
+            </div>
         </div>
-        
+        <div class="w3-row w3-padding-32">
+            <div class="text-section">
+                <div class="w3-col m6">
+                    <div class="sect1">
+                        <p>
+                            "Bienvenido a Café Pop, en el corazón de Buenos Aires. Ofrecemos una amplia variedad de cafés, desde clásicos hasta creaciones innovadoras, 
+                            elaborados con granos de calidad de todo el mundo. Nuestro acogedor ambiente es perfecto para disfrutar de café, bocadillos y postres artesanales 
+                            mientras te relajas o trabajas. Únete a nosotros para una experiencia única donde el café es la estrella. ¡Te esperamos en Café Pop!"
+                        </p>
+                    </div>
+                </div>
+                <div class="w3-col m6 w3-large w3-margin-bottom">
+                    <div class="sect2">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.2021288981023!2d-58.395855923623664!3d-34.599049972955996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccabfc64bcc8b%3A0x305052981a4e16e8!2sAv.%20Callao%20858%2C%20C1023AAO%20Cdad.%20Aut%C3%B3noma%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1715105612017!5m2!1ses-419!2sar" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+        </div>    
+    </div>
     </main>
+
+    <script>
+        // Automatic Slideshow
+        var myIndex = 0;
+        carousel();
+
+        function carousel() {
+        var i;
+        var x = document.getElementsByClassName("mySlides");
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";  
+        }
+        myIndex++;
+        if (myIndex > x.length) {myIndex = 1}    
+        x[myIndex-1].style.display = "block";  
+        setTimeout(carousel, 4000);  // change image every 4 seconds  
+        }
+    </script>
 </body>
 </html>

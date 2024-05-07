@@ -22,7 +22,13 @@ body{
   text-align: center;
   background-color: #474e5dbe;
   color: white;
-  font-family: 'Montserrat' , ;
+  font-family: 'Montserrat' ;
+}
+
+.main {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
 }
 
 .text-section {
@@ -30,5 +36,7 @@ body{
   text-align: center;
   background-color: #ffffffbe;
   color: black;
-  font-family: 'Montserrat' , ;
+  font-family: 'Montserrat' ;
+  position: absolute;
 }
+
