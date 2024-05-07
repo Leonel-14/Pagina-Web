@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pop Café</title>
+  <link rel="shortcut icon" href="/img/logo.ico" type="image/x-icon">
+  <link rel="stylesheet" href="/css/style.css">
+
+</head>
+
+<body>
+
+  <header>
+    <div class="custom-header">
+      <div class="custom-logo">
+        <img src="/img/img008.png" alt="Imagen izquierda">
+        <img src="/img/logo.png" alt="Imagen central">
+        <img src="/img/img008.png" alt="Imagen derecha">
+      </div>
+      <nav class="custom-nav">
+        <ul>
+          <li><a href="/index.html">Inicio</a></li>
+          <li><a href="/pages/productos.html">Productos</a></li>
+          <li><a href="/pages/acerca.html">Acerca de</a></li>
+          <li><a href="/pages/ingresar.html">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+    
+  <main>
+
+    <h1>Pop Café</h1>
+
+    <p>"¡Bienvenidos a Pop Café! Somos mucho más que una simple cafetería: somos un destino vibrante donde la pasión por el café se encuentra con la creatividad y la comunidad. En Pop Café, cada taza cuenta una historia, cada aroma despierta los sentidos y cada sonrisa es el resultado de una experiencia única. Únete a nosotros para descubrir un mundo de sabores audaces, momentos memorables y un ambiente acogedor que te hará volver por más. ¡Prepárate para sumergirte en la energía de Pop Café y dejar que tu café se convierta en una experiencia verdaderamente pop!"</p>
+
+    <div class="carousel-container">
+      <div class="carousel">
+        <div class="slide"><img src="/img/cafe-americano.jpg" alt="Imagen 1"></div>
+        <div class="slide"><img src="/img/cafe-cappucino.jpg" alt="Imagen 2"></div>
+        <div class="slide"><img src="/img/cafe-expreso.jpg" alt="Imagen 3"></div>
+      </div>
+      <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+      <button class="next" onclick="moveSlide(1)">&#10095;</button>
+      <div class="dot-container">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+      </div>
+    </div>
+
+
+    <div class="container">
+      <div class="card">
+        <img src="/img/coffee-3759006.jpg" alt="Imagen 1">
+        <div class="card-content">
+          <h2>Título del Artículo</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+          <code>console.log('Hola Mundo');</code>
+          <p>Descripción del artículo.</p>
+        </div>
+      </div>
+    
+      <div class="card">
+        <img src="/img/coffee-3759011.jpg" alt="Imagen 2">
+        <div class="card-content">
+          <h2>Título del Artículo</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+          <code>console.log('Hola Mundo');</code>
+          <p>Descripción del artículo.</p>
+        </div>
+      </div>
+
+
+      <div class="card">
+        <img src="/img/ai-generated-8470299_1920.jpg" alt="Imagen 2">
+        <div class="card-content">
+          <h2>Título del Artículo</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+          <code>console.log('Hola Mundo');</code>
+          <p>Descripción del artículo.</p>
+        </div>
+      </div>
+    
+      <!-- Agregar más tarjetas según sea necesario -->
+    </div>
+    
+  </main>
+
+  <footer>
+    <div class="flex-container">
+      <!-- Primera caja con la imagen img000 -->
+      <img src="/img/img000.png" alt="img000" width="100" height="100">
+      <!-- Segunda caja con el logo y los textos -->
+      <div>
+        <img src="/img/logo.png" alt="cafepop" class="logo">
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="/pages/productos.html">Productos/Servicios</a></li>
+          <li><a href="/pages/acerca.html">Acerca</a></li>
+          <li><a href="/pages/ingresar.html">Ingresar</a></li>
+        </ul>
+        <small>
+          <span>Codo a codo - 1<sup>er</sup> cuatrimestre - 2024</span><br>
+          <span>Integrantes: Leonel Rodriguez - Elizabeth Ohiggins - Ignacio Mufarrege - Gabriel Campos</span>
+        </small>
+      </div>
+      <!-- Tercera caja con la otra imagen img000 -->
+      <img src="/img/img000.png" alt="img000" width="100" height="100">
+    </div>
+  </footer>
+
+  <script src="/js/carrusel.js"></script>
+  
+</body>
+
+</html>

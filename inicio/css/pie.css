@@ -1,0 +1,36 @@
+/* Estilos para el pie de página */
+footer {
+  background-color: rgb(209, 209, 86); /* Color café */
+  color: white;
+  padding: 20px 0;
+  border-radius: 15px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centra los elementos horizontalmente */
+}
+.flex-container {
+  display: flex;
+  justify-content: space-around; /* Distribuye las cajas uniformemente en el espacio disponible */
+  width: 100%; /* Ancho completo */
+  margin-bottom: 10px; /* Espacio entre las cajas */
+}
+.logo {
+  width: 100px; /* Tamaño del logo */
+  margin: 10px; /* Espacio entre el logo y los textos */
+}
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+ul li {
+  display: inline;
+  margin: 0 10px;
+}
+ul li:first-child {
+  margin-left: 0;
+}
+ul li:last-child {
+  margin-right: 0;
+}
