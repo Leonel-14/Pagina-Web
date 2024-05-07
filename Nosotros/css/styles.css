@@ -1,0 +1,34 @@
+html {
+    box-sizing: border-box;
+}
+  
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+  
+body{
+  background-image: url(../img/fondo.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  margin: 0;
+  font-family: 'Montserrat' ;
+}
+
+.about-section {
+  padding: 50px;
+  text-align: center;
+  background-color: #474e5dbe;
+  color: white;
+  font-family: 'Montserrat' , ;
+}
+
+.text-section {
+  padding: 50px;
+  text-align: center;
+  background-color: #ffffffbe;
+  color: black;
+  font-family: 'Montserrat' , ;
+}
