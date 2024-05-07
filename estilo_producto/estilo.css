@@ -1,0 +1,76 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    padding: 0;
+    margin: 0;
+    background-image: url(../imagenes/fondo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    font-family: 'Montserrat'
+}
+.contenedor-productos{
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color :rgba(255, 255, 255, 0.745);
+}
+
+.elemento{ 
+    width: 270px;
+    height: 300px;
+    margin: 20px;
+    border: 1px solid black;
+    box-shadow: 5px 5px 8px black;
+    text-align: center;
+    border-radius: 30px;
+    overflow: hidden;
+    background-color: white;
+}
+
+.elemento hr{
+    width: 90%;
+}
+.elemento p{
+    font-size: 20px;
+}
+.elemento .precio{
+    color: limegreen;
+    font-weight: bold;
+    margin: 5px;
+}
+.imagen img{
+    width: 100%;
+}
+/**------------------Celular----------------- **/
+@media only screen and (min-width: 0px) and (max-width: 426px){
+    .contenedor-productos{
+        height: 380vh;
+    }
+    .elemento{ 
+        width: 240px;
+        height: 250px;
+    }
+    .elemento p{
+        font-size: 15px;
+    }
+}
+/**------------------Tablet----------------- **/
+@media only screen and (min-width: 426px) and (max-width: 769px){
+    .contenedor-productos{
+        height: 200vh;
+    }
+    .elemento{ 
+        width: 240px;
+        height: 260px;
+    }
+    .elemento p{
+        font-size: 18px;
+    }
+}
+
+
