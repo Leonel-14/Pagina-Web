@@ -1,0 +1,33 @@
+input[type=text] {
+    width: 75%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid rgb(91, 144, 214);
+    border-radius: 3px;
+    background-color: #102f3d;
+    color: white;
+  }
+  input[type=number] {
+    width: 25%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid rgb(91, 144, 214);
+    border-radius: 3px;
+    background-color: #102f3d;
+    color: white;
+  }
+  
+
+  input[type=email] {
+    width: 25%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid rgb(91, 144, 214);
+    border-radius: 3px;
+    background-color: #102f3d;
+    color: white;
+  }
+  
