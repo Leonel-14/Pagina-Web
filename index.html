@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Café Pop - Inicio</title>
+  <link rel="shortcut icon" href="./img/logo.png" type="image/x-icon">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+</head>
+
+<body class="body-index">
+
+  <header class="header-nav">
+      <div class="custom-logo">
+        <img class="img-lado" src="/img/img008.png" alt="Imagen izquierda" width="50">
+        <img class="img-medio" src="/img/logo.png" alt="Imagen central" width="100">
+        <img class="img-lado" src="/img/img008.png" alt="Imagen derecha" width="50">
+      </div>
+      <div class="div-nav">
+        <nav class="custom-nav">
+          <a href="/index.html">Inicio</a>
+          <a href="/producto.html">Productos</a>
+          <a href="/nosotros.html">Nosotros</a>
+          <a href="/trabaja_con_nosotros.html">Trabaja con nosotros</a>
+        </nav>
+      </div>
+  </header>
+    
+  <main class="main-index">
+
+    <h1>Pop Café</h1>
+
+    <p>"¡Bienvenidos a Pop Café! Somos mucho más que una simple cafetería: somos un destino vibrante donde la pasión por el café se encuentra con la creatividad y la comunidad. En Pop Café, cada taza cuenta una historia, cada aroma despierta los sentidos y cada sonrisa es el resultado de una experiencia única. Únete a nosotros para descubrir un mundo de sabores audaces, momentos memorables y un ambiente acogedor que te hará volver por más. ¡Prepárate para sumergirte en la energía de Pop Café y dejar que tu café se convierta en una experiencia verdaderamente pop!"</p>
+
+    <div class="carousel-container">
+      <div class="carousel">
+        <div class="slide"><img src="./img/cafe-americano.jpg" alt="Imagen 1"></div>
+        <div class="slide"><img src="./img/cafe-cappucino.jpg" alt="Imagen 2"></div>
+        <div class="slide"><img src="./img/cafe-expreso.jpg" alt="Imagen 3"></div>
+      </div>
+      <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+      <button class="next" onclick="moveSlide(1)">&#10095;</button>
+      <div class="dot-container">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer-nav">
+    <div class="div-footer">
+    <nav class="custom-nav">
+        <a href="/index.html">Inicio</a>
+        <a href="/producto.html">Productos</a>
+        <a href="/nosotros.html">Nosotros</a>
+        <a href="/trabaja_con_nosotros.html">Trabaja con nosotros</a>
+    </nav>
+    </div>
+    <div class="contain-redes">
+      <a href="https://instagram.com" target="_blank"><img class="img-red" src="../img/instagram.png" alt="Imagen izquierda" width="30" height="30"></a>
+      <a href="https://www.facebook.com" target="_blank"><img class="img-red" src="../img/facebook.png" alt="Imagen central" width="30" height="30"></a>
+      <a href="https://www.twitter.com/" target="_blank"><img class="img-red" src="../img/twitter.png" alt="Imagen derecha" width="30" height="30"></a>
+    </div>
+    <div class="texto-integrantes">
+      <span>Codo a codo - 1<sup>er</sup> cuatrimestre - 2024</span><br>
+      <span>Integrantes: Leonel Rodriguez - Elizabeth Ohiggins - Ignacio Mufarrege - Gabriel Campos</span>
+    </div>
+  </footer>
+
+  <script src="./js/carrusel.js"></script>
+  
+</body>
+
+</html>

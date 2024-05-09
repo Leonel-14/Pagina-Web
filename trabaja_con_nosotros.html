@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Café Pop - Contáctanos</title>
+    <link rel="shortcut icon" href="./img/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <script src="./js/validar.js"></script>
+   
+</head>
+
+<body class="body-trabaja">
+    <header class="header-nav">
+        <div class="custom-logo">
+          <img class="img-lado" src="/img/img008.png" alt="Imagen izquierda" width="50">
+          <img class="img-medio" src="/img/logo.png" alt="Imagen central" width="100">
+          <img class="img-lado" src="/img/img008.png" alt="Imagen derecha" width="50">
+        </div>
+        <div class="div-nav">
+          <nav class="custom-nav">
+            <a href="/index.html">Inicio</a>
+            <a href="/producto.html">Productos</a>
+            <a href="/nosotros.html">Nosotros</a>
+            <a href="/trabaja_con_nosotros.html">Trabaja con nosotros</a>
+          </nav>
+        </div>
+    </header>
+    <main class="main-trabaja">
+        <h1>Trabaja con nosotros.</h1>
+        
+        
+        <form  class="bac" onsubmit="return validarTelefono();"  action="./show_data.html">
+            <fieldset>
+                <legend>Contáctanos:</legend>
+            <p>
+                <label for="uname">Nombre:</label>
+            </p>
+            <p><input id="uname" maxlength="50" name="name" required="" size="12" type="text"></p>
+            <p>
+                <label for="uapellido">Apellido:</label>
+            </p>
+            <p><input id="uapellido" maxlength="50" name="apellido" required="" size="12" type="text"></p>
+            <p>
+            <p>
+                <label for="imagen">Imagen:</label>
+            </p>
+            <p><input id="imagen" name="imagen" required="" type="file"></p>
+            <p>
+                <label for="uedad">Edad:</label>
+            </p>
+            <p><input id="uedad" name="edad" required="" type="number" min="18" max="99"></p>
+            <p>
+                <label for="udomicilio">Domicilio:</label>
+            </p>
+            <p><input id="udomicilio" maxlength="50" name="domicilio" required="" size="12" type="text"></p>
+            <p>
+                <label id = "telefono" for="utelefono">Teléfono:</label>
+            </p>
+            <p><input id="utelefono" name="telefono" required="" type="number"></p>
+            <p>
+                <label for="uemail">Correo Electrónico:</label>
+            </p>
+            <p><input id="uemail" maxlength="30" name="email" required="" size="12" type="email"></p>
+            <br>
+            <label>Genero: </label>
+            <label for="femenino">Femenino</label>
+                <input type="radio" id="femenino" name="genero" value="femenino" required>
+
+            <label for="masculino">Masculino</label>
+                <input type="radio" id="masculino" name="genero" value="masculino">
+             <br>
+            <br>
+            
+             <label>Idiomas: </label>
+             <label for="ingles">Inglés</label>
+             <input type="checkbox" id="ingles" name="idiomas" value="ingles">
+             <label for="frances">Francés</label>
+             <input type="checkbox" id="frances" name="idiomas" value="frances">
+             <label for="español">Español</label>
+             <input type="checkbox" id="español" name="idiomas" value="español" required>
+
+            <br>
+            <br>
+             <label for="estudio">Últimos estudios alcanzados:</label>
+             <select name="estudio" id="estudio">
+             <option value="primaria" id="Primaria">Primaria</option>
+             <option value="secundario" id="Secundario">Secundario</option>
+             <option value="terciario" id="Terciario">Terciario</option>
+             <option value="Universitario" id="Universitario">Universitario</option>
+             <option value="posgrado" id="Posgrado">Posgrado</option>
+             </select>
+             <br>
+
+            <br>
+            <label>Comentarios: </label>
+            <br>
+            <p>
+                <textarea id="nota" maxlength="600" cols="80" rows="10" name="nota" placeholder="Escriba aquí su comentario..."></textarea>
+            </p>
+            <div><input name="enviar" type="submit" value="Enviar"></div>
+            <br>
+            <p id="resultado"></p>
+            <br>
+            <div><input name="borrar" type="reset" value="Borrar"></div>
+        </fieldset>
+        </form>
+
+
+
+    </main>
+    <footer class="footer-nav">
+        <div class="div-footer">
+        <nav class="custom-nav">
+            <a href="/index.html">Inicio</a>
+            <a href="/producto.html">Productos</a>
+            <a href="/nosotros.html">Nosotros</a>
+            <a href="/trabaja_con_nosotros.html">Trabaja con nosotros</a>
+        </nav>
+        </div>
+        <div class="contain-redes">
+        <a href="https://instagram.com" target="_blank"><img class="img-red" src="../img/instagram.png" alt="Imagen izquierda" width="30" height="30"></a>
+        <a href="https://www.facebook.com" target="_blank"><img class="img-red" src="../img/facebook.png" alt="Imagen central" width="30" height="30"></a>
+        <a href="https://www.twitter.com/" target="_blank"><img class="img-red" src="../img/twitter.png" alt="Imagen derecha" width="30" height="30"></a>
+        </div>
+        <div class="texto-integrantes">
+        <span>Codo a codo - 1<sup>er</sup> cuatrimestre - 2024</span><br>
+        <span>Integrantes: Leonel Rodriguez - Elizabeth Ohiggins - Ignacio Mufarrege - Gabriel Campos</span>
+        </div>
+    </footer> 
+
+    <script src="./js/validar.js"></script>
+</body>
+
+</html>

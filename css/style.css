@@ -1,0 +1,270 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box !important;
+}
+
+/*-------------------------Gabriel CSS-------------------------------*/
+.header-nav {
+  width: 100%;
+  height: 20vh;
+  background-color: #ac664d;
+}
+
+.custom-logo {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 10px;
+}
+
+.div-nav,
+.div-footer {
+  display: flex;
+  justify-content: center;
+}
+
+.custom-nav {
+  display: flex;
+  justify-content: space-around;
+  width: 40%;
+}
+
+.custom-nav a {
+  color: #3a0603;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.footer-nav {
+  background-color: #ac664d;
+}
+
+.div-footer {
+  padding-top: 20px;
+}
+
+.contain-redes {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.contain-redes a {
+  margin: 20px;
+}
+
+.texto-integrantes {
+  text-align: center;
+  width: 100%;
+}
+
+.main-index {
+  padding: 50px;
+  text-align: center;
+  background-color: #ffffffbe;
+  color: black;
+
+}
+
+/*.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+}*/
+
+/*--------------Carrusel-----------------*/
+.carousel-container {
+  position: relative;
+  max-width: 800px;
+  /* Ajusta el ancho del carrusel */
+  margin: auto;
+}
+
+.carousel {
+  display: flex;
+  overflow: hidden;
+}
+
+.slide {
+  flex: 0 0 100%;
+}
+
+.slide img {
+  width: 100%;
+  height: auto;
+}
+
+.prev,
+.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+  /* Ajusta el tamaño de los botones */
+  height: 50px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.prev {
+  left: 0;
+}
+
+.next {
+  right: 0;
+}
+
+.dot-container {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.dot {
+  display: inline-block;
+  width: 10px;
+  /* Ajusta el tamaño de los indicadores */
+  height: 10px;
+  background-color: #bbb;
+  border-radius: 50%;
+  cursor: pointer;
+  margin: 0 5px;
+}
+
+.active {
+  background-color: #717171;
+}
+
+
+
+/*-------------------------Leonel CSS-------------------------------*/
+
+.body-index,
+.body-productos,
+.body-nosotros,
+.body-trabaja {
+  padding: 0;
+  margin: 0;
+  background-image: url(/img/fondo.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  font-family: 'Montserrat';
+}
+
+.contenedor-productos {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  background-color: rgba(255, 255, 255, 0.745);
+}
+
+.elemento {
+  width: 270px;
+  height: 300px;
+  margin: 20px;
+  border: 1px solid black;
+  box-shadow: 5px 5px 8px black;
+  text-align: center;
+  border-radius: 30px;
+  overflow: hidden;
+  background-color: white;
+}
+
+.elemento hr {
+  width: 90%;
+}
+
+.elemento p {
+  font-size: 20px;
+}
+
+.elemento .precio {
+  color: limegreen;
+  font-weight: bold;
+  margin: 5px;
+}
+
+.imagen-cafe-carta img {
+  width: 100%;
+}
+
+/*-----Celular------*/
+@media only screen and (min-width: 0px) and (max-width: 426px) {
+  .contenedor-productos {
+    height: 380vh;
+  }
+
+  .elemento {
+    width: 240px;
+    height: 250px;
+  }
+
+  .elemento p {
+    font-size: 15px;
+  }
+}
+
+/*-----Tablet------*/
+@media only screen and (min-width: 426px) and (max-width: 769px) {
+  .contenedor-productos {
+    height: 200vh;
+  }
+
+  .elemento {
+    width: 240px;
+    height: 260px;
+  }
+
+  .elemento p {
+    font-size: 18px;
+  }
+}
+
+/*-------------------------Ignacio CSS-------------------------------*/
+
+
+.about-section-nosotros {
+  padding: 50px;
+  text-align: center;
+  background-color: #ffffffbe;
+  color: black;
+  font-family: 'Montserrat';
+}
+
+.main-nosotros {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.text-section-nosotros {
+  padding: 50px;
+  text-align: center;
+  background-color: #ffffffbe;
+  color: black;
+  font-family: 'Montserrat';
+  position: relative;
+  height: 450px;
+}
+
+
+
+
+/*-------------------------Ely CSS-------------------------------*/
+.main-trabaja {
+  padding: 50px;
+  text-align: center;
+  background-color: #ffffffbe;
+  color: black;
+}
+
+/*-------------------------------------------------------------------*/
