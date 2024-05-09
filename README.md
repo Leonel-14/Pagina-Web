@@ -1,4 +1,4 @@
-# Pagina-Web Coffee
+# Pagina-Web Pop Café
 
 Miembros del proyecto:
 
@@ -6,3 +6,5 @@ Miembros del proyecto:
 - Gabriel Campos
 - Juan Ignacio Mufarrege
 - Leonel F. Rodriguez
+
+link: https://pop-cafe.netlify.app/
