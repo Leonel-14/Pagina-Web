@@ -1,7 +1,5 @@
-*,
-*:before,
-*:after {
-  box-sizing: border-box !important;
+*{
+  box-sizing: border-box;
 }
 
 /*-------------------------Gabriel CSS-------------------------------*/
@@ -56,7 +54,7 @@
   margin: 20px;
 }
 
-.texto-integrantes {
+.members-text{
   text-align: center;
   width: 100%;
 }
@@ -68,13 +66,6 @@
   color: black;
 
 }
-
-/*.container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  padding: 20px;
-}*/
 
 /*--------------Carrusel-----------------*/
 .carousel-container {
@@ -145,7 +136,7 @@
 /*-------------------------Leonel CSS-------------------------------*/
 
 .body-index,
-.body-productos,
+.body-products,
 .body-nosotros,
 .body-trabaja {
   padding: 0;
@@ -158,7 +149,7 @@
   font-family: 'Montserrat';
 }
 
-.contenedor-productos {
+.container-products {
   display: flex;
   width: 100%;
   height: 100vh;
@@ -167,7 +158,7 @@
   background-color: rgba(255, 255, 255, 0.745);
 }
 
-.elemento {
+.element {
   width: 270px;
   height: 300px;
   margin: 20px;
@@ -179,52 +170,95 @@
   background-color: white;
 }
 
-.elemento hr {
+.element hr {
   width: 90%;
 }
 
-.elemento p {
+.element p {
   font-size: 20px;
 }
 
-.elemento .precio {
+.element .price {
   color: limegreen;
   font-weight: bold;
   margin: 5px;
 }
 
-.imagen-cafe-carta img {
+.img-coffee-card img {
   width: 100%;
 }
 
 /*-----Celular------*/
 @media only screen and (min-width: 0px) and (max-width: 426px) {
-  .contenedor-productos {
+  .container-products {
     height: 380vh;
   }
+  /*cabezera*/
+  .custom-logo{
+    width: 100%;
+    height: 50%;
+  }
+  .img-lado{
+    width: 10%;
+  }
+  .img-medio{
+    width: 20%;
+  }
+  .custom-nav{
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: 15px;
+  }
+  .custom-nav a{
+    font-size: 12px;
+  }
+  /*--------------*/
 
-  .elemento {
+  .element {
     width: 240px;
     height: 250px;
   }
 
-  .elemento p {
+  .element p {
     font-size: 15px;
   }
 }
 
 /*-----Tablet------*/
 @media only screen and (min-width: 426px) and (max-width: 769px) {
-  .contenedor-productos {
+  .container-products {
     height: 200vh;
   }
 
-  .elemento {
+  /*cabezera*/
+  .custom-logo{
+    width: 100%;
+    height: 60%;
+  }
+  .img-lado{
+    width: 8%;
+  }
+  .img-medio{
+    width: 15%;
+  }
+  .custom-nav{
+    width: 100%;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-top: 15px;
+  }
+  .custom-nav a{
+    font-size: 15px;
+  }
+  /*--------------*/
+
+  .element {
     width: 240px;
     height: 260px;
   }
 
-  .elemento p {
+  .element p {
     font-size: 18px;
   }
 }
@@ -255,10 +289,6 @@
   position: relative;
   height: 450px;
 }
-
-
-
-
 /*-------------------------Ely CSS-------------------------------*/
 .main-trabaja {
   padding: 50px;
