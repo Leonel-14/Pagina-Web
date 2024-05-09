@@ -194,6 +194,9 @@
     height: 380vh;
   }
   /*cabezera*/
+  .header-nav{
+    height: 110px;
+  }
   .custom-logo{
     width: 100%;
     height: 50%;
