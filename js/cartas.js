@@ -1,3 +1,39 @@
+
+
+const { createApp } = Vue
+createApp({
+  data() {
+    return {
+      url: "https://raw.githubusercontent.com/Leonel-14/api_datos_json/main/datos.json",
+      datos: [],
+      error: false,
+    }
+  },
+  methods: {
+    fetchData(url) {
+      fetch(url)
+        .then(response => response.json())
+        .then(
+          data => {
+              console.log(data)
+              this.datos = data
+          }
+        )
+        .catch(error => {
+          console.log("Error:" + error)
+          this.error = true
+        });
+    }
+  },
+  created() {  // created() se ejecuta cada vez que se crea el objeto VUE
+    this.fetchData(this.url)
+  }
+  }).mount('#app')
+
+
+/*
+
+
 const menuCafes = [
     {
         id: 1,
@@ -52,6 +88,7 @@ const menuCafes = [
 let card_coffe = ``; 
 let element;
 
+
 for(element of menuCafes){
     card_coffe += `
         <div class="element animate__animated animate__fadeInDown">
@@ -64,3 +101,4 @@ for(element of menuCafes){
 };
 
 document.querySelector(".container-products").innerHTML = card_coffe;
+*/

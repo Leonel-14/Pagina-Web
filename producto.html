@@ -1,54 +1,69 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="./img/logo.png" type="image/x-icon">
-    <link rel="stylesheet" href="./css/style.css">
-    <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
-    <title>Café Pop - Productos</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="./img/logo.png" type="image/x-icon">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+  
+  <title>Café Pop - Productos</title>
 </head>
+
 <body class="body-products">
-    <header class="header-nav">
-        <div class="custom-logo">
-          <img class="img-lado" src="/img/img008.png" alt="Imagen izquierda" width="50">
-          <img class="img-medio" src="/img/logo.png" alt="Imagen central" width="100">
-          <img class="img-lado" src="/img/img008.png" alt="Imagen derecha" width="50">
-        </div>
-        <div class="div-nav">
-          <nav class="custom-nav">
-            <a href="/index.html">Inicio</a>
-            <a href="/producto.html">Productos</a>
-            <a href="/nosotros.html">Nosotros</a>
-            <a href="/trabaja_con_nosotros.html">Trabaja con nosotros</a>
-          </nav>
-        </div>
-    </header>
-   <!--Tarjetas-->
-    <div class="container-products">
-        <script src="./js/cartas.js"></script>
+  <header class="header-nav">
+    <div class="custom-logo">
+      <img class="img-lado" src="/img/img008.png" alt="Imagen izquierda" width="50">
+      <img class="img-medio" src="/img/logo.png" alt="Imagen central" width="100">
+      <img class="img-lado" src="/img/img008.png" alt="Imagen derecha" width="50">
     </div>
-    <footer class="footer-nav">
-        <div class="div-footer">
-        <nav class="custom-nav">
-            <a href="/index.html">Inicio</a>
-            <a href="/producto.html">Productos</a>
-            <a href="/nosotros.html">Nosotros</a>
-            <a href="/trabaja_con_nosotros.html">Trabaja con nosotros</a>
-        </nav>
+    <div class="div-nav">
+      <nav class="custom-nav">
+        <a href="/index.html">Inicio</a>
+        <a href="/producto.html">Productos</a>
+        <a href="/nosotros.html">Nosotros</a>
+        <a href="/trabaja_con_nosotros.html">Trabaja con nosotros</a>
+      </nav>
+    </div>
+  </header>
+  <!--Tarjetas-->
+  <div class="container-products" id="app">
+      <div v-for = "element in datos[2].img_productos">
+        <div class="element animate__animated animate__fadeInDown">
+          <div class="img-coffee-card"><img :src="element.img" :alt="element.nombre_img"></div>
+          <p>{{element.nombre_img}}</p>
+          <hr>
+          <p class="price">${{element.precio}}</p>
         </div>
-        <div class="contain-redes">
-        <a href="https://instagram.com" target="_blank"><img class="img-red" src="../img/instagram.png" alt="Imagen izquierda" width="30" height="30"></a>
-        <a href="https://www.facebook.com" target="_blank"><img class="img-red" src="../img/facebook.png" alt="Imagen central" width="30" height="30"></a>
-        <a href="https://www.twitter.com/" target="_blank"><img class="img-red" src="../img/twitter.png" alt="Imagen derecha" width="30" height="30"></a>
-        </div>
-        <div class="members-text">
-        <span>Codo a codo - 1<sup>er</sup> cuatrimestre - 2024</span><br>
-        <span>Integrantes: Leonel Rodriguez - Elizabeth Burgos - Ignacio Mufarrege - Gabriel Campos</span>
-        </div>
-    </footer> 
+      </div>
+    </div>
+  </div>
+  <footer class="footer-nav">
+    <div class="div-footer">
+      <nav class="custom-nav">
+        <a href="/index.html">Inicio</a>
+        <a href="/producto.html">Productos</a>
+        <a href="/nosotros.html">Nosotros</a>
+        <a href="/trabaja_con_nosotros.html">Trabaja con nosotros</a>
+      </nav>
+    </div>
+    <div class="contain-redes">
+      <a href="https://instagram.com" target="_blank"><img class="img-red" src="../img/instagram.png"
+          alt="Imagen izquierda" width="30" height="30"></a>
+      <a href="https://www.facebook.com" target="_blank"><img class="img-red" src="../img/facebook.png"
+          alt="Imagen central" width="30" height="30"></a>
+      <a href="https://www.twitter.com/" target="_blank"><img class="img-red" src="../img/twitter.png"
+          alt="Imagen derecha" width="30" height="30"></a>
+    </div>
+    <div class="members-text">
+      <span>Codo a codo - 1<sup>er</sup> cuatrimestre - 2024</span><br>
+      <span>Integrantes: Leonel Rodriguez - Elizabeth Burgos - Ignacio Mufarrege - Gabriel Campos</span>
+    </div>
+  </footer>
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <script src="js/cartas.js"></script>
 </body>
+
 </html>
