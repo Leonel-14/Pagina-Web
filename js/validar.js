@@ -6,7 +6,7 @@ function validarTelefono() {
         if (telefono.length == 10) {
             return true; // Longitud válida
         } else {
-            alert("El número de teléfono debe tener entre 10");
+            alert("El número de teléfono debe tener 10 digitos");
             return false; // Longitud inválida
         }
     }

@@ -302,5 +302,15 @@
   background-color: #ffffffbe;
   color: black;
 }
+.bac{
+  display: flex;
+  justify-content: center;
+}
+
+fieldset {
+  border-width: 2px; /* Grosor de la línea */
+  border-color: gray; /* Color de la línea */
+  width: 60%;
+}
 
 /*-------------------------------------------------------------------*/
