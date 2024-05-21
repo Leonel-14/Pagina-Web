@@ -33,7 +33,7 @@
         <h1>Trabaja con nosotros.</h1>
         
         
-        <form  class="bac" onsubmit="return validarTelefono();"  action="./show_data.html">
+        <form  class="bac" onsubmit="return validacion();"  action="./show_data.html">
             <fieldset>
                 <legend><b><h2>Contáctanos:</h2></b></legend>
             <p>
@@ -52,19 +52,19 @@
             <p>
                 <label for="uedad">Edad:</label>
             </p>
-            <p><input id="uedad" name="edad" required="" type="number" min="18" max="99"></p>
+            <p><input id="uedad" name="edad" required="" type="number" min="18" max="99" size="5"></p>
             <p>
                 <label for="udomicilio">Domicilio:</label>
             </p>
-            <p><input id="udomicilio" maxlength="50" name="domicilio" required="" size="12" type="text"></p>
+            <p><input id="udomicilio" maxlength="50" name="domicilio" required="" size="20" type="text"></p>
             <p>
                 <label id = "telefono" for="utelefono">Teléfono:</label>
             </p>
-            <p><input id="utelefono" name="telefono" required="" type="number"></p>
+            <p><input id="utelefono" name="telefono" required="" type="number"  size="10"></p>
             <p>
                 <label for="uemail">Correo Electrónico:</label>
             </p>
-            <p><input id="uemail" maxlength="30" name="email" required="" size="12" type="email"></p>
+            <p><input id="uemail" maxlength="30" name="email" required="" size="20" type="email"></p>
             <br>
             <label>Genero: </label>
             <label for="femenino">Femenino</label>
@@ -96,10 +96,10 @@
              <br>
 
             <br>
-            <label>Comentarios: </label>
+            <label>Perfil destacado: </label>
             <br>
             <p>
-                <textarea id="nota" maxlength="600" cols="80" rows="10" name="nota" placeholder="Escriba aquí su comentario..."></textarea>
+                <textarea id="nota" required="" maxlength="600" cols="80" rows="10" name="nota" placeholder="Escribe aquí sobre tí..."></textarea>
             </p>
             <div><input name="enviar" type="submit" value="Enviar"></div>
             <br>
