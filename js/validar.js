@@ -14,9 +14,9 @@ function validacion(){
     } else if (edad <=17 || edad>99) {
         alert ("Edad Errónea.  La edad debe ser entre 18 y 99 años");
         return false
-         //Valida que el texarea no esté vacio
+         //Valida que en el texarea no haya solo epacios, que el número de caracteres sea mayor a cero y que el valor introducido no solo esté formado por espacios en blanco. 
     } else if (valor == null || valor.length == 0 || /^\s+$/.test(valor)){
-        alert("En comentarios, debe escibir algo sobre tí");
+        alert("En Perfil Destacado, debes escibir algo sobre tí");
         return false;
     }
     return true; 
