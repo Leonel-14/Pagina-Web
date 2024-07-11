@@ -15,25 +15,24 @@
 <body class="body-products">
   <header class="header-nav">
     <div class="custom-logo">
-      <img class="img-lado" src="/img/img008.png" alt="Imagen izquierda" width="50">
-      <img class="img-medio" src="/img/logo.png" alt="Imagen central" width="100">
-      <img class="img-lado" src="/img/img008.png" alt="Imagen derecha" width="50">
+      <img class="img-medio" src="img/logo.png" alt="Imagen central" width="100">
     </div>
     <div class="div-nav">
       <nav class="custom-nav">
-        <a href="/index.html">Inicio</a>
-        <a href="/producto.html">Productos</a>
-        <a href="/nosotros.html">Nosotros</a>
-        <a href="/trabaja_con_nosotros.html">Trabaja con nosotros</a>
+        <a href="index.html">Inicio</a>
+        <a href="producto.html">Productos</a>
+        <a href="nosotros.html">Nosotros</a>
+        <a href="trabaja_con_nosotros.html">Trabaja con nosotros</a>
+        <a href="compra.html"><img src="https://cdn.icon-icons.com/icons2/933/PNG/512/shopping-cart_icon-icons.com_72552.png"></a>
       </nav>
     </div>
-  </header>
+</header>
   <!--Tarjetas-->
   <div class="container-products" id="app">
-      <div v-for = "element in datos[2].img_productos">
+      <div v-for = "element in datosC">
         <div class="element animate__animated animate__fadeInDown">
-          <div class="img-coffee-card"><img :src="element.img" :alt="element.nombre_img" ></div>
-          <p>{{element.nombre_img}}</p>
+          <div class="img-coffee-card"><img :src="element.imagen" :alt="element.nombre" ></div>
+          <p>{{element.nombre}}</p>
           <hr>
           <p class="price">${{element.precio}}</p>
         </div>
@@ -42,18 +41,18 @@
   <footer class="footer-nav">
     <div class="div-footer">
       <nav class="custom-nav">
-        <a href="/index.html">Inicio</a>
-        <a href="/producto.html">Productos</a>
-        <a href="/nosotros.html">Nosotros</a>
-        <a href="/trabaja_con_nosotros.html">Trabaja con nosotros</a>
+        <a href="index.html">Inicio</a>
+        <a href="producto.html">Productos</a>
+        <a href="nosotros.html">Nosotros</a>
+        <a href="trabaja_con_nosotros.html">Trabaja con nosotros</a>
       </nav>
     </div>
     <div class="contain-redes">
-      <a href="https://instagram.com" target="_blank"><img class="img-red" src="../img/instagram.png"
+      <a href="https://instagram.com" target="_blank"><img class="img-red" src="img/instagram.png"
           alt="Imagen izquierda" width="30" height="30"></a>
-      <a href="https://www.facebook.com" target="_blank"><img class="img-red" src="../img/facebook.png"
+      <a href="https://www.facebook.com" target="_blank"><img class="img-red" src="img/facebook.png"
           alt="Imagen central" width="30" height="30"></a>
-      <a href="https://www.twitter.com/" target="_blank"><img class="img-red" src="../img/twitter.png"
+      <a href="https://www.twitter.com/" target="_blank"><img class="img-red" src="img/twitter.png"
           alt="Imagen derecha" width="30" height="30"></a>
     </div>
     <div class="members-text">

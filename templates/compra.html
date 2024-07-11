@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Café Pop - Compra</title>
+  <link rel="shortcut icon" href="./img/logo.png" type="image/x-icon">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+</head>
+
+<body id="app" class="body-index">
+  <header class="header-nav">
+    <div class="custom-logo">
+      <img class="img-medio" src="img/logo.png" alt="Imagen central" width="100">
+    </div>
+    <div class="div-nav">
+      <nav class="custom-nav">
+        <a href="index.html">Inicio</a>
+        <a href="producto.html">Productos</a>
+        <a href="nosotros.html">Nosotros</a>
+        <a href="trabaja_con_nosotros.html">RR.HH</a>
+        <a href="compra.html"><img
+            src="https://cdn.icon-icons.com/icons2/933/PNG/512/shopping-cart_icon-icons.com_72552.png"></a>
+      </nav>
+    </div>
+  </header>
+  <section class="seccion_main">
+
+    <div class="contenedor_cartita">
+      <div v-if="datosC.length === 0">
+        <p>No hay productos</p>
+      </div>
+      <div v-else class="cartita" v-for="cafe in datosC">
+        <div class="contenedor_img_cartita">
+          <img :src="cafe.imagen">
+        </div>
+        <p>Nombre: {{cafe.nombre}}</p>
+        <p>Precio: {{cafe.precio}}</p>
+        <input type="number" placeholder="Cantidad" v-model="cantidad">
+        <button v-on:click="agregar_carrito(cafe.nombre,cafe.imagen,cafe.precio,cafe.id)">Agregar</button>
+      </div>
+    </div>
+    <div class="carrito" v-if="lista.length === 0">
+      <p class="vacio">Carrito Vacio</p>
+    </div>
+    <div class="carrito" v-else>
+      <div class="fila-producto" v-for="(x,index) in lista">
+        <div class="producto-carrito">
+          <div class="carrito-listado-img">
+            <img :src="x.imagen">
+          </div>
+          <div class="datos-cafe">
+            <p>{{x.nombre}}</p>
+            <p>${{x.precio}}</p>
+            <input :value="x.cantidad" :id="index" disabled>
+          </div>
+          <div class="producto-botones">
+            <button v-on:click="editar(index)" id="edit">Editar</button>
+            <button v-on:click="guardar(index)" id="save">Guardar</button>
+            <button v-on:click="eliminar(index)" id="delete">Eliminar</button>
+          </div>
+        </div>
+      </div>
+      <div class="contenedor-formulario">
+        <form>
+          <input placeholder="Nombre" v-model="nombre">
+          <input placeholder="Direccion" v-model="direccion">
+        </form>
+      </div>
+      <div class="contenedor-btcomprar">
+        <button class="comprar-boton" v-on:click="insertar()">Comprar</button>
+      </div>
+    </div>
+    <div class="msj_sin_pedidos" v-if="datosP.length === 0">
+      <p>Sin pedidos</p>
+    </div>
+    <div class="contenedor-tablas" v-else>
+      <table class="tabla_pedidos">
+        <thead>
+          <th>N° Pedido</th>
+          <th>Nombre</th>
+          <th>Direccion</th>
+          <th>Bebida</th>
+          <th>Precio x Unidad</th>
+          <th>Cantidad</th>
+          <th>Total</th>
+          <th class="bt_acciones" colspan="2">Acciones</th>
+        </thead>
+        <tbody v-for="pedido in datosP">
+          <td>{{pedido.id}}</td>
+          <td>{{pedido.nombre}}</td>
+          <td>{{pedido.direccion}}</td>
+          <td>{{pedido.id_bebida}}</td>
+          <td>${{pedido.precio_unidad}}</td>
+          <td>{{pedido.cantidad}}</td>
+          <td>${{pedido.total}}</td>
+          <td><button class="boton_modificar"><a :href="'actualizacion.html?id=' + pedido.id">Modificar</a></button>
+          </td>
+          <td><button class="boton_eliminar" v-on:click="eliminar_pedido(pedido.id)">Eliminar</button></td>
+        </tbody>
+      </table>
+      <table class="tabla_pedidos_slim">
+        <tbody v-for="pedido in datosP">
+        <tr>
+          <td>N° Pedido</td>
+          <td>{{pedido.id}}</td>
+        </tr>
+        <tr>
+          <td>Nombre</td>
+          <td>{{pedido.nombre}}</td>
+        </tr>
+        <tr>
+          <td>Direccion</td>
+          <td>{{pedido.direccion}}</td>
+        </tr>
+        <tr>
+          <td>Bebida</td>
+          <td>{{pedido.id_bebida}}</td>
+        </tr>
+        <tr>
+          <td>Precio x Unidad</td>
+          <td>${{pedido.precio_unidad}}</td>
+        </tr>
+        <tr>
+          <td>Cantidad</td>
+          <td>{{pedido.cantidad}}</td>
+        </tr>
+        <tr>
+          <td>Total</td>
+          <td>${{pedido.total}}</td>
+        </tr>
+        <tr>
+          <td>Acciones</td>
+          <td><button class="boton_modificar"><a :href="'actualizacion.html?id=' + pedido.id">Modificar</a></button>
+          <button class="boton_eliminar" v-on:click="eliminar_pedido(pedido.id)">Eliminar</button></td>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <footer class="footer-nav">
+    <div class="div-footer">
+      <nav class="custom-nav">
+        <a href="index.html">Inicio</a>
+        <a href="producto.html">Productos</a>
+        <a href="nosotros.html">Nosotros</a>
+        <a href="trabaja_con_nosotros.html">Trabaja con nosotros</a>
+      </nav>
+    </div>
+    <div class="contain-redes">
+      <a href="https://instagram.com" target="_blank"><img class="img-red" src="img/instagram.png"
+          alt="Imagen izquierda" width="30" height="30"></a>
+      <a href="https://www.facebook.com" target="_blank"><img class="img-red" src="img/facebook.png"
+          alt="Imagen central" width="30" height="30"></a>
+      <a href="https://www.twitter.com/" target="_blank"><img class="img-red" src="img/twitter.png" alt="Imagen derecha"
+          width="30" height="30"></a>
+    </div>
+    <div class="members-text">
+      <span>Codo a codo - 1<sup>er</sup> cuatrimestre - 2024</span><br>
+      <span>Integrantes: Leonel Rodriguez - Elizabeth Burgos - Ignacio Mufarrege - Gabriel Campos</span>
+    </div>
+  </footer>
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <script src="js/cartas.js"></script>
+</body>
+
+</html>

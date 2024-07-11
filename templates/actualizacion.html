@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+  <link rel="stylesheet" href="./css/style.css">
+  <title>Actualizacion Pedido</title>
+</head>
+
+<body class="body-actualizar">
+  <main class="actualizar" id="app">
+        <div class="contenedor-formulario-actualizar">
+          <p>N° Pedido {{id}}</p>
+          <div class="contenedor-form-img">
+            <img :src="imagen">
+          </div>
+          <form>
+            <label for="nombre">Nombre</label>
+            <input type="text" name="nombre" id="nombre" v-model="nombre">
+            <label for="direccion">Dirección</label>
+            <input type="text" name="direccion" id="direccion" v-model="direccion">
+          </form>
+          <p>Precio x Unidad: ${{precio}}</p>
+          <p>Cantidad: {{cantidad}}</p>
+          <p>Total: ${{total}}</p>
+          <button v-on:click="modificar(id)">Guardar</button>
+        </div>
+  </main>
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <script src="./js/actualizacion.js"></script>
+</body>
+
+</html>
