@@ -1,7 +1,6 @@
 from flask import request, jsonify
 from models.modelo_db import *
 
-
 @app.route('/', methods=['GET'])
 def mostrar_cafes():
     cafes = Cafe.query.all()

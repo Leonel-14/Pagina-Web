@@ -2,8 +2,8 @@ const { createApp } = Vue
 createApp({
   data() {
     return {
-      urlCafes: "http://localhost:5000",
-      urlPedidos: "http://localhost:5000/pedidos",
+      urlCafes: "https://loz14.pythonanywhere.com",
+      urlPedidos: "https://loz14.pythonanywhere.com/pedidos",
       datosC: [],
       datosP:[],
       error: false,

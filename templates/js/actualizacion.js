@@ -12,7 +12,7 @@ const { createApp } = Vue
         cantidad:0,
         precio:0,
         total:0,
-        url:'http://localhost:5000/pedidos/'+id,
+        url:'https://loz14.pythonanywhere.com/pedidos/'+id,
        }  
     },
     methods: {
